@@ -130,12 +130,14 @@ export function Footer({ locale = "es" }: FooterProps) {
               <a
                 href="#"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors duration-200"
+                aria-label={locale === "es" ? "Facebook" : "Facebook"}
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors duration-200"
+                aria-label={locale === "es" ? "Instagram" : "Instagram"}
               >
                 <Instagram className="w-5 h-5" />
               </a>

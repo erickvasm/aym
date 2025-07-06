@@ -28,6 +28,8 @@ const translations = {
   },
 }
 
+// ... tu import y código arriba igual
+
 export function Contact({ locale = "es" }: ContactProps) {
   const t = translations[locale]
 
@@ -51,6 +53,7 @@ export function Contact({ locale = "es" }: ContactProps) {
                   <a
                       href={`tel:${t.contact.phone}`}
                       className="text-lg font-medium text-card-foreground hover:underline"
+                      aria-label={locale === "es" ? `Llamar al teléfono ${t.contact.phone}` : `Call phone number ${t.contact.phone}`}
                   >
                     {t.contact.phone}
                   </a>
@@ -64,6 +67,7 @@ export function Contact({ locale = "es" }: ContactProps) {
                   <a
                       href={`mailto:${t.contact.email}`}
                       className="text-lg font-medium text-card-foreground hover:underline"
+                      aria-label={locale === "es" ? `Enviar correo a ${t.contact.email}` : `Send email to ${t.contact.email}`}
                   >
                     {t.contact.email}
                   </a>
@@ -79,6 +83,7 @@ export function Contact({ locale = "es" }: ContactProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-lg font-medium text-card-foreground hover:underline"
+                      aria-label={locale === "es" ? "Enviar mensaje por WhatsApp al +506 8668-8651" : "Send WhatsApp message to +506 8668-8651"}
                   >
                     +506 8668-8651
                   </a>
@@ -92,7 +97,7 @@ export function Contact({ locale = "es" }: ContactProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full flex items-center justify-center bg-muted hover:bg-emerald-600 hover:text-white transition"
-                    aria-label="Facebook"
+                    aria-label={locale === "es" ? "Facebook" : "Facebook"}
                 >
                   <Facebook className="w-6 h-6" />
                 </a>
@@ -101,7 +106,7 @@ export function Contact({ locale = "es" }: ContactProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full flex items-center justify-center bg-muted hover:bg-emerald-600 hover:text-white transition"
-                    aria-label="Instagram"
+                    aria-label={locale === "es" ? "Instagram" : "Instagram"}
                 >
                   <Instagram className="w-6 h-6" />
                 </a>

@@ -35,6 +35,7 @@ export function MapSection({ locale = "es" }: MapSectionProps) {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="filter dark:invert dark:hue-rotate-180 dark:brightness-95 dark:contrast-90"
+              title="Mapa de La Cruz, Guanacaste, Costa Rica"
             />
           </div>
         </div>

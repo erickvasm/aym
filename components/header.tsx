@@ -107,7 +107,7 @@ export function Header({locale = "es"}: HeaderProps) {
           <div className="absolute right-4 top-1/2 -translate-y-1/2 md:hidden z-50">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="bg-transparent">
+                <Button variant="outline" size="icon" className="bg-transparent" aria-label={locale === "es" ? "Abrir menú" : "Open menu"}>
                   <Menu className="h-6 w-6"/>
                 </Button>
               </SheetTrigger>
